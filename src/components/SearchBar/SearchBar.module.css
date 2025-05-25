@@ -1,0 +1,29 @@
+.searchBar {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 16px;
+  background-color: blue;
+}
+.searchForm {
+  display: flex;
+  gap: 24px;
+  padding: 16px 0;
+}
+.searchForm input {
+  display: block;
+  min-width: 400px;
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  outline: none;
+  transition: box-shadow 0.2s ease;
+}
+.searchForm input:focus {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.searchForm button {
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+}

@@ -1,0 +1,13 @@
+.wrapper {
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.text {
+    padding: 0;
+    color: #02fd80;
+    font-size: 68px;
+    line-height: 1;
+}
