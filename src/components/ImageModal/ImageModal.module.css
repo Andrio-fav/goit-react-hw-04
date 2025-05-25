@@ -1,0 +1,50 @@
+  .Modal {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 85vw;
+      height: 85vh;
+      transform: translate(-50%, -50%);
+      background-color: #242424;
+      border: 1px solid #20b2aa;
+  }
+
+  .Overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgb(255, 255, 288, 0.4);
+  }
+
+  .closeBtn {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 3px solid #20b2aa;
+      color: #02fd80;
+      background-color: #242424;
+      cursor: pointer;
+      transition: 400ms ease;
+      transition-property: box-shadow;
+  }
+
+  .closeBtn:hover {
+      box-shadow: 0 0 16px #20b2aa;
+  }
+
+  .text {
+      position: absolute;
+      bottom: 20px;
+      left: 40px;
+      padding: 8px;
+      font-size: 18px;
+      border-radius: 8px;
+      border: 1px solid #20b2aa;
+      color: #02fd80;
+      background-color: #242424;
+  }

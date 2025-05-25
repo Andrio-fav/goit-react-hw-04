@@ -1,10 +1,13 @@
 import { useEffect, useState } from 'react';
 import css from './App.module.css';
+import { BeatLoader } from 'react-spinners';
+import fetchPhotos from './searchImg';
+import Modal from 'react-modal'
 import SearchBar from './components/SearchBar/SearchBar';
-import ImageGallery from './components/ImageGalllery/ImageGalllery';
+import ImageGallery from './components/ImageGallery/ImageGallery';
 import LoadMoreBtn from './components/LoadMoreBtn/LoadMoreBtn'
 import ImageModal from './components/ImageModal/ImageModal';
-import ErrorMessage from '../ErrorMessage/ErrorMessage';
+import ErrorMessage from './components/ErrorMessage/ErrorMessage';
 
 export default function App() {
     const [images, setImages] = useState([]);
@@ -14,11 +17,11 @@ export default function App() {
     const [page, setPage] = useState(1);
     const [modalIsOpen, setIsOpen] = useState(false);
     const [modalImg, setModalImg] = useState('');
-
+    
     function openModal(largeURL) {
-        setModalImg(largeURL);
-        setIsOpen(true);
-        Modal.setAppElement('#imageCard');
+      setModalImg(largeURL);
+      setIsOpen(true);
+      Modal.setAppElement('#modal');
     }
 
     function closeModal() {
@@ -58,7 +61,7 @@ export default function App() {
         <div className={css.container}>
             <SearchBar onSearch={handleSearch} />
             {isError && <ErrorMessage />}
-            {isLoading && <BarLoader />}
+            {isLoading && <BeatLoader />}
             {images.length > 0 && (
                 <ImageGallery
                 onOpen={setModalImg}
